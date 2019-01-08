@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script>
+            //ex1
+            var s = 'the quick brown fox';
+            function firstCap(str) {
+                ar = str.split(' ');
+                result = '';
+                console.log(ar);
+                ar.forEach(function(a){
+                    result += a.charAt(0).toUpperCase() + a.slice(1) + ' ';
+                })
+                return result;
+            }
+            console.log(firstCap(s));
+            
+            //ex2
+            function maximum(ints) {
+                return Math.max.apply(null,ints);
+            }
+            console.log(maximum([1000, 2, 3]));
+
+            //ex3
+            function moveLastThree(str) {
+                if(str.length >= 3){
+                    return str.slice(-3) + str.slice(0, -3);
+                }
+                else{
+                    return 'String has to be more than 3 chars';
+                }
+                
+            }
+            console.log(moveLastThree('456123'));
+            console.log(moveLastThree('kk'));
+
+            //ex4
+            function angle_type(angle) {
+                if(0 <= angle && angle < 90){
+                    return 'Acute angle';
+                }
+                else if(angle == 90){
+                    return 'Right angle';
+                }
+                else if(90 < angle && angle < 180){
+                    return 'Obtuse angle';
+                }
+                else if(angle == 180){
+                    return 'Straight angle';
+                }
+                
+            }
+            console.log(angle_type(47));
+            console.log(angle_type(90));
+            console.log(angle_type(145));
+            console.log(angle_type(180));
+        </script>
+    </head>
+</html>
